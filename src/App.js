@@ -1,5 +1,20 @@
 import React from "react";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
+import Home from './pages/Home'
+import About from './pages/About'
+// import SingleCocktail from './pages/SingleCocktail'
+// import Error from './pages/Error'
 
 export default function App() {
-  return <h1>app component</h1>;
+  return (
+    <Router>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/about">
+        <About />
+      </Route>
+    </Router>
+  )
 }
